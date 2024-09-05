@@ -9,7 +9,14 @@ $Q(n)=q_{r+1}n^{r+1}+q_rn^r+\dots+q_1n+q_0.$
 
 If given the rational numbers $r,p_0,\dots,p_r$, this program outputs the rational numbers $r+1,q_0,\dots,q_{r+1}$.
 
-## Example
+## Usage
+Requirements:
+- A UNIX build environment with a C compiler and Make installed
+- [GNU Multiple Precision Arithmetic Library](https://gmplib.org/). `apt install libgmp-dev` on Debian-based systems
+
+Build with `make`.
+
+### Example
 If we want to evaluate the sum
 $Q(n)=1+2+\dots+n,$
 we give the program the input (on `/dev/stdin`)
