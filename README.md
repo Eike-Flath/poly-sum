@@ -51,5 +51,5 @@ and get
 1/3
 ```
 i.e.
-$Q(n)=\frac13k^3-\frac14k^2-\frac14k+\frac13$.
+$Q(n)=\frac13n^3-\frac14n^2-\frac14n+\frac13$.
 You can verify this result using [WolframAlpha](https://www.wolframalpha.com/input?i2d=true&i=Sum%5BPower%5Bk%2C2%5D-Divide%5B3%2C2%5Dk%2BDivide%5B1%2C3%5D%2C%7Bk%2C0%2Cn%7D%5D) (which renders my program obsolete).
