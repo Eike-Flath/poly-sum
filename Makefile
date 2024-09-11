@@ -11,6 +11,9 @@ SRC = poly-sum.c
 
 OBJ = $(SRC:.c=.o)
 
+.PHONY: all
+all: $(OUT)
+
 $(OUT): $(OBJ)
 	$(LD) $(LDFLAGS) -o "$@" $^ $(LIBS)
 

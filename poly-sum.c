@@ -110,7 +110,8 @@ int main(void) {
   if (ret == EOF && ferror(stdin)) {
     perror("scanf failed");
     return EXIT_FAILURE;
-  } else if (ret != 1) {
+  }
+  if (ret != 1) {
     fprintf(stderr, "expected a degree (non-negative integer).\n");
     return EXIT_FAILURE;
   }
@@ -119,10 +120,13 @@ int main(void) {
     ret = gmp_scanf("%Qd\n", p->coeff[i]);
     if (ret == EOF && ferror(stdin)) {
       perror("gmp_scanf failed");
+      destroy_poly(p);
       return EXIT_FAILURE;
-    } else if (ret != 1) {
+    }
+    if (ret != 1) {
       fprintf(stderr,
               "expected the coefficient p_%" PRIu32 " (rational number)\n", i);
+      destroy_poly(p);
       return EXIT_FAILURE;
     }
   }
